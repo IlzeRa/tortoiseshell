@@ -1,0 +1,145 @@
+html{
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+body{
+  font-family: "Helvetica", sans-serif;
+  font-size: 1rem;
+}
+
+header{
+  width: 100%;
+  height:31rem;
+  background-image: url("../images/glasses-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.site-container{
+  width: 960px;
+  height: 30rem;
+  margin:0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+nav{
+  width: 100%;
+  height: 3rem;
+  background-color: cadetblue;
+  position: relative;
+  top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  padding-left:2rem;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo img{
+  height:1.5rem;
+  width: auto;
+  padding-right: 1rem;
+}
+
+h4,
+a{
+  color:white;
+  text-decoration: none;
+  padding-right: 2rem;
+}
+
+.links{
+margin: 1rem 0rem;
+}
+
+
+.heading{
+  position: relative;
+  top: 10rem;
+  height: 5rem;
+  width:33.2564rem;
+  background-color: white;
+  display: flex;
+  margin-right: -2rem;
+}
+
+.heading h1{
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: bold;
+  padding: 1.5rem 5rem;
+}
+
+section{
+  width: 100%;
+  height:46rem;
+  }
+
+#center{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icons{
+  display: flex;
+  margin: 3rem 0;
+  width: 100%;
+  height:8rem;
+  justify-content: center;
+  }
+
+  .icon-one{
+    background-image: url("../images/paper-icon.png");
+    background-size: 3.5rem auto;
+      }
+
+.icon-one,
+.icon-two,
+.icon-three{
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 5rem;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+
+}
+
+  .icon-two{
+    background-image: url("../images/ruler-icon.png");
+    background-size: 5rem auto;
+    margin: 0 6rem;
+    }
+
+  .icon-three{
+    background-image: url("../images/truck-icon.png");
+    background-size: 5rem auto;
+    }
+
+    .icon-one h4,
+    .icon-two h4,
+    .icon-three h4{
+      color:black;
+      font-size: 1rem;
+      line-height: 1.4;
+      position:relative;
+      padding: 4.5rem;
+
+
+
+
+
+    }
