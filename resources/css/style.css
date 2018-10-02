@@ -9,7 +9,6 @@ body{
 }
 
 header{
-  width: 100%;
   height:31rem;
   background-image: url("../images/glasses-bg.png");
   background-size: cover;
@@ -19,12 +18,8 @@ header{
 
 .site-container{
   width: 960px;
-  height: auto;
   margin:0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
+  }
 
 nav{
   width: 100%;
@@ -61,12 +56,18 @@ a{
 margin: 1rem 0rem;
 }
 
+.item{
+  display: flex;
+}
+
+header .item{
+  justify-content: flex-end;
+}
 
 .heading{
   position: relative;
   top: 10rem;
-  height: 5rem;
-  width:33.2564rem;
+  padding:1.5rem 5rem;
   background-color: white;
   display: flex;
   margin-right: -2rem;
@@ -76,66 +77,49 @@ margin: 1rem 0rem;
   font-size: 2rem;
   line-height: 1.2;
   font-weight: bold;
-  padding: 1.5rem 5rem;
-}
+  }
+
+/*Main section*/
 
 section{
   width: 100%;
-  height:auto;
   }
 
-#center{
+.center{
   display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 
-.icons{
-  display: flex;
-  margin: 3rem 0;
+section.center{
+align-items: center;
+flex-direction: column;
+  }
+
+.group{
   width: 100%;
-  height:8rem;
-  justify-content: center;
-  }
-
-  .icon-one{
-    background-image: url("../images/paper-icon.png");
-    background-size: 3.5rem auto;
-      }
-
-.icon-one,
-.icon-two,
-.icon-three{
-  background-position: top;
-  background-repeat: no-repeat;
-  width: 5rem;
-  height: 8rem;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.icon{
+  display: flex;
+  margin: 3rem;
+  height:8rem;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  width: 5rem;
   text-align: center;
-}
+  }
 
-  .icon-two{
-    background-image: url("../images/ruler-icon.png");
-    background-size: 5rem auto;
-    margin: 0 6rem;
+  #special{
+    width: 3.5rem;
     }
 
-  .icon-three{
-    background-image: url("../images/truck-icon.png");
-    background-size: 5rem auto;
-    }
-
-    .icon-one h4,
-    .icon-two h4,
-    .icon-three h4{
-      color:black;
-      font-size: 1rem;
-      line-height: 1.4;
-      position:relative;
-      padding: 4.5rem;
-    }
+.icon img{
+  width: 5rem;
+  margin-bottom: 1rem;
+  }
 
 .text{
   width: 100%;
@@ -146,20 +130,16 @@ section{
   align-items: flex-start;
 }
 
-.philosophy,
-.appointments
-{
+.phil{
  width: 35%;
  height: auto;
  margin-right: 5%;
  display: flex;
  justify-content: flex-start;
  flex-direction: column;
-
 }
 
-.philosophy h4,
-.appointments h4{
+.phil h4{
   background-color: cadetblue;
   font-weight: bold;
   text-transform: uppercase;
@@ -169,33 +149,137 @@ section{
   margin-bottom: 1rem;
   }
 
-  .philosophy p,
-  .appointments p{
+  .phil p{
   line-height: 1.4;
 }
 
   /*Footer*/
-
 footer{
-  width: 100%;
-  height: 9.5rem;
   background-color: azure;
-}
-
-.second-logo{
-  width: 100%;
-  display: inline-flex;
+  display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 4rem 0 4rem 4rem;
 }
-
-.second-logo img{
+footer img{
   height: 1.5rem;
-  padding-right: 1rem;
+  padding:4rem 1rem 4rem 4rem;
 }
 
-.second-logo h4{
+footer h4{
   color: black;
-
 }
+
+.nav-mobile{
+  display: none;
+}
+
+@media only screen and (max-width: 1077px){
+  header{
+    height: 22rem;
+    width: 100%;
+  }
+
+.site-container{
+    width: 100%;
+      }
+
+.nav-mobile{
+  display: none;
+}
+
+  nav{
+    top:0;
+    width: 100%;
+  }
+
+  .heading{
+    top:5rem;
+    margin-right: 2rem;
+    padding:0.75rem 4rem;
+  }
+
+  .heading h1{
+    font-size: 1.33rem;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  header{
+    height: 17rem;
+    background-position: 20%;
+  }
+
+.nav-desktop{
+  display: none;
+}
+
+.nav-mobile{
+  display: inline;
+}
+
+.logo h4{
+  display:none;
+}
+
+.heading{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top:9rem;
+  margin: 0;
+  padding:1rem 0 1rem 0;
+}
+
+.heading h1{
+  font-size: 1rem;
+}
+}
+
+@media only screen and (max-width: 550px){
+ .mobile-group{
+  display: flex;
+  flex-direction: column;
+  margin: 3.77rem 0;
+}
+
+.icon{
+  font-size: 0.77rem;
+  margin: 0.77rem;
+  height: auto;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.phil{
+  width: 100%;
+}
+
+.phil h4{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+}
+
+.phil p{
+  font-size: 0.75rem;
+  margin-bottom: 4rem;
+  padding:0.3rem;
+}
+
+footer h4{
+  display:none;
+}
+
+.alfa{
+  display: flex;
+  justify-content: center;
+}
+
+.alfa img{
+  padding:4rem 0;
+}
+ }
